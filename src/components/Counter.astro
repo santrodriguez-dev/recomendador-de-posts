@@ -1,0 +1,40 @@
+---
+
+---
+
+<article transition:persist class="flex items-center gap-3">
+  <button
+    id="subButton"
+    type="button"
+    class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+    >-</button
+  >
+  <span id="counter">0</span>
+  <button
+    id="addButton"
+    type="button"
+    class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+    >+</button
+  >
+</article>
+
+<script is:inline>
+  const $counter = document.querySelector("#counter");
+  const $addBtn = document.querySelector("#addButton");
+  const $subBtn = document.querySelector("#subButton");
+  let counter = 0;
+
+  if (!$counter || !$addBtn || !$subBtn) {
+    throw new Error("Element not found");
+  }
+
+  $addBtn?.addEventListener("click", () => {
+    counter += 1;
+    $counter.innerHTML = counter.toString();
+  });
+
+  $subBtn?.addEventListener("click", () => {
+    counter -= 1;
+    $counter.innerHTML = counter.toString();
+  });
+</script>

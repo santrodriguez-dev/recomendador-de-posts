@@ -1,0 +1,73 @@
+---
+import HeaderButton from "./HeaderButton.astro";
+---
+
+<header class="text-center p-10 mb-6">
+  <h1 class="text-5xl font-bold mb-8">Recomendador de Posts ✨</h1>
+  <nav>
+    <ul class="flex justify-center items-center gap-4">
+      <li>
+        <HeaderButton href="/">
+          <svg
+            slot="before"
+            width="26"
+            height="26"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M5 12l-2 0l9 -9l9 9l-2 0"></path>
+            <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path>
+            <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"></path>
+          </svg> Home
+        </HeaderButton>
+      </li>
+      <li>
+        <HeaderButton href="/posts">
+          <svg
+            slot="before"
+            width="26"
+            height="26"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M13 4v4c-6.575 1.028 -9.02 6.788 -10 12c-.037 .206 5.384 -5.962 10 -6v4l8 -7l-8 -7z"
+            ></path>
+          </svg>Posts</HeaderButton
+        >
+      </li>
+      <li>
+        <HeaderButton href="/about">
+          <svg
+            slot="before"
+            width="26"
+            height="26"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 9h.01"></path>
+            <path d="M11 12h1v4h1"></path>
+            <path
+              d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"
+            ></path>
+          </svg>Sobre el proyecto</HeaderButton
+        >
+      </li>
+    </ul>
+  </nav>
+</header>
